@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name UrlTransformer
-// @version 0.1
+// @version 0.2
 // @description urlTransformer for link
 // @author You
 // @match *://*/*
@@ -10,6 +10,10 @@
 
 (function() {
     'use strict';
+
+    if (document.URL.includes("bib.cnrs.fr")) {
+        return;
+    }
 
     console.log('urlTransfomer extension launched');
 
